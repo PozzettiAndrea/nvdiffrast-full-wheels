@@ -10,10 +10,16 @@ pip install nvdiffrast --find-links https://PozzettiAndrea.github.io/nvdiffrast-
 
 ## Supported Configurations
 
-- **CUDA:** 12.4, 12.8
-- **Python:** 3.10, 3.11, 3.12
+| CUDA | PyTorch | Python |
+|------|---------|--------|
+| 12.4 | 2.5.1 | 3.10, 3.11, 3.12 |
+| 12.6 | 2.6.0 | 3.10, 3.11, 3.12, 3.13 |
+| 12.6 | 2.8.0 | 3.10, 3.11, 3.12, 3.13 |
+| 12.8 | 2.8.0 | 3.10, 3.11, 3.12, 3.13 |
+| 12.8 | 2.9.1 | 3.10, 3.11, 3.12, 3.13 |
+
 - **Platforms:** Linux (x86_64), Windows (amd64)
-- **GPU:** GTX 10 series+ / RTX 20/30/40 series (SM 6.1+)
+- **GPU:** RTX 20/30/40/50 series (SM 7.5+)
 
 ## Building
 
