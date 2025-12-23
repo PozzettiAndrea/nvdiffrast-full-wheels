@@ -153,7 +153,8 @@ jobs:
         run: |
           cd nvdiffrast\dist
           Get-ChildItem *.whl | ForEach-Object {
-            $newname = $_.Name -replace '-cp', '+cu${{ env.CUDA_SHORT }}torch${{ env.TORCH_MM }}-cp'
+            # Use [regex]::Replace with count=1 to only replace first occurrence (like sed without /g)
+            $newname = [regex]::Replace($_.Name, '-cp', '+cu${{ env.CUDA_SHORT }}torch${{ env.TORCH_MM }}-cp', 1)
             Rename-Item $_.FullName $newname
           }
           Get-ChildItem
